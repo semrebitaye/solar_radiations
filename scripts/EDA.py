@@ -5,29 +5,51 @@ import matplotlib.dates as mdates
 plt.rcParams['font.family'] = 'Noto Sans Ethiopic'
 
 benin_file_path = 'data/benin-malanville.csv'
-# togo_file_path = 'd'
-# benin_file_path = 'data/benin-malanville.csv'
+togo_file_path = 'data/togo-dapaong_qc.csv'
+sierraleone_file_path = 'data/sierraleone-bumbuna.csv'
 
 
 df_benin = pd.read_csv(benin_file_path)
+df_togo = pd.read_csv(togo_file_path)
+df_sierraleone = pd.read_csv(sierraleone_file_path)
 
 # to see the overview of the data
 # print(df_benin.head())
+# print(df_togo.head())
+print(df_togo.head())
 
 # print(df_benin.dtypes)
+print(df_togo.dtypes)
+print(df_sierraleone.dtypes)
 
 # df_benin.info()
+df_togo.info()
+df_sierraleone.info()
 
-# columns_to_exclude = ['Timestamp', 'Cleaning', 'Comments']
+columns_to_exclude = ['Timestamp', 'Cleaning', 'Comments']
 # df_benin_filtered = df_benin.drop(columns= columns_to_exclude)
+df_togo_filtered = df_togo.drop(columns= columns_to_exclude)
+df_sierraleone_filtered = df_sierraleone.drop(columns= columns_to_exclude)
 
-# columns_to_exclude_for_mode = ['Timestamp', 'Comments']
+columns_to_exclude_for_mode = ['Timestamp', 'Comments']
 # df_benin_mode_filtered = df_benin.drop(columns = columns_to_exclude_for_mode)
+df_togo_filtered = df_togo.drop(columns = columns_to_exclude_for_mode)
+df_sierraleone_filtered = df_sierraleone.drop(columns = columns_to_exclude_for_mode)
 
-# mean = df_benin_filtered.mean()
-# median = df_benin_filtered.median()
-# mode = df_benin_mode_filtered.mode().iloc[0]
-# standard_deviation = df_benin_filtered.std()
+# benin_mean = df_benin_filtered.mean()
+# benin_median = df_benin_filtered.median()
+# benin_mode = df_benin_mode_filtered.mode().iloc[0]
+# benin_standard_deviation = df_benin_filtered.std()
+
+togo_mean = df_togo_filtered.mean()
+togo_median = df_togo_filtered.median()
+togo_mode = df_togo_filtered.mode().iloc[0]
+togo_standard_deviation = df_togo_filtered.std()
+
+sierraleone_mean = df_sierraleone_filtered.mean()
+tsierraleone_median = df_sierraleone_filtered.median()
+sierraleone_mode = df_sierraleone_filtered.mode().iloc[0]
+sierraleone_standard_deviation = df_sierraleone_filtered.std()
 
 
 # print(mean)
