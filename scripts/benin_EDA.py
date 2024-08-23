@@ -18,16 +18,16 @@ df_benin = pd.read_csv(benin_file_path)
 
 # df_benin.info()
 
-columns_to_exclude = ['Timestamp', 'Cleaning', 'Comments']
-df_benin_filtered = df_benin.drop(columns= columns_to_exclude)
+# columns_to_exclude = ['Timestamp', 'Cleaning', 'Comments']
+# df_benin_filtered = df_benin.drop(columns= columns_to_exclude)
 
-columns_to_exclude_for_mode = ['Timestamp', 'Comments']
-df_benin_mode_filtered = df_benin.drop(columns = columns_to_exclude_for_mode)
+# columns_to_exclude_for_mode = ['Timestamp', 'Comments']
+# df_benin_mode_filtered = df_benin.drop(columns = columns_to_exclude_for_mode)
 
-mean = df_benin_filtered.mean()
-median = df_benin_filtered.median()
-mode = df_benin_mode_filtered.mode().iloc[0]
-standard_deviation = df_benin_filtered.std()
+# mean = df_benin_filtered.mean()
+# median = df_benin_filtered.median()
+# mode = df_benin_mode_filtered.mode().iloc[0]
+# standard_deviation = df_benin_filtered.std()
 
 
 # print(mean)
